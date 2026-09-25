@@ -18,7 +18,7 @@
   <!-- OpenGraph -->
   <meta property="og:title" content="Galeri Foto & Video Paintball">
   <meta property="og:description" content="Lihat berbagai momen keseruan dan kekompakan para pemain di arena paintball kami. Jadikan tim Anda bagian dari galeri kami selanjutnya.">
-  <meta property="og:url" content="https://paintball.web.id/gallery.html">
+  <meta property="og:url" content="https://paintball.web.id/gallery">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://paintball.web.id/assets/img/logo.png">
   <meta property="og:site_name" content="Paintball.web.id">
@@ -48,10 +48,14 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/aos/aos.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"></noscript>
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -91,6 +95,7 @@
 }
   </script>
 
+  <link rel="preload" as="image" href="assets/img/homepage/aksi-pemain-paintball-di-hutan-pinus.webp" fetchpriority="high">
 </head>
 
 <body class="gallery-page">
@@ -116,7 +121,7 @@
           <li><a href="gallery" class="active">Galeri</a></li>
           <li><a href="artikel">Artikel</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" aria-label="Toggle navigation"></i>
       </nav>
       <a class="btn-getstarted" href="https://wa.me/6282211221909" target="_blank">Booking Sekarang</a>
     </div>
@@ -161,7 +166,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-aksi">
               <div class="portfolio-wrap" >
-                <img src="assets/img/galeri/serangan-adrenalin-rimba.webp" class="img-fluid" alt="Aksi Paintball">
+                <img loading="lazy" decoding="async" src="assets/img/galeri/serangan-adrenalin-rimba.webp" class="img-fluid" alt="Aksi Paintball">
                 <div class="portfolio-info">
                   <h4>Aksi Paintball</h4>
                   <p>Pertempuran seru di zona hutan</p>
@@ -173,7 +178,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tim">
               <div class="portfolio-wrap" >
-                <img src="assets/img/galeri/koordinasi-tim-paintball-sebelum-bertanding.webp" class="img-fluid"
+                <img loading="lazy" decoding="async" src="assets/img/galeri/koordinasi-tim-paintball-sebelum-bertanding.webp" class="img-fluid"
                   alt="Tim Paintball">
                 <div class="portfolio-info">
                   <h4>Kekompakan Tim</h4>
@@ -186,7 +191,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-arena">
               <div class="portfolio-wrap">
-                <img src="assets/img/galeri/perlengkapan-keamanan-paintball-standar-tinggi.webp" class="img-fluid"
+                <img loading="lazy" decoding="async" src="assets/img/galeri/perlengkapan-keamanan-paintball-standar-tinggi.webp" class="img-fluid"
                   alt="Perlengkapan Paintball">
                 <div class="portfolio-info">
                   <h4>Perlengkapan Keamanan</h4>
@@ -199,7 +204,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tim">
               <div class="portfolio-wrap">
-                <img src="assets/img/galeri/selebrasi-kemenangan-paintball.webp" class="img-fluid"
+                <img loading="lazy" decoding="async" src="assets/img/galeri/selebrasi-kemenangan-paintball.webp" class="img-fluid"
                   alt="Selebrasi Kemenangan">
                 <div class="portfolio-info">
                   <h4>Selebrasi Kemenangan</h4>
@@ -212,7 +217,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-arena">
               <div class="portfolio-wrap">
-                <img src="assets/img/galeri/arena-cqb-paintball-indonesia.webp" class="img-fluid" alt="Arena CQB">
+                <img loading="lazy" decoding="async" src="assets/img/galeri/arena-cqb-paintball-indonesia.webp" class="img-fluid" alt="Arena CQB">
                 <div class="portfolio-info">
                   <h4>Arena CQB</h4>
                   <p>Zona pertempuran jarak dekat</p>
@@ -224,7 +229,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tim">
               <div class="portfolio-wrap">
-                <img src="assets/img/galeri/keseruan-team-building-paintball.webp" class="img-fluid"
+                <img loading="lazy" decoding="async" src="assets/img/galeri/keseruan-team-building-paintball.webp" class="img-fluid"
                   alt="Outing Perusahaan">
                 <div class="portfolio-info">
                   <h4>Outing Perusahaan</h4>
@@ -332,7 +337,7 @@
         </div>
         <div class="col-md-6 text-center text-md-end">
           <div class="social-links d-inline-flex gap-2">
-            <a href="https://instagram.com/" target="_blank"
+            <a aria-label="Instagram" href="https://instagram.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)'; this.style.borderColor='transparent';"
@@ -346,21 +351,21 @@
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-tiktok"></i></a>
 
-            <a href="https://linkedin.com/" target="_blank"
+            <a aria-label="LinkedIn" href="https://linkedin.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#0077b5'; this.style.borderColor='#0077b5';"
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-linkedin"></i></a>
 
-            <a href="https://facebook.com/" target="_blank"
+            <a aria-label="Facebook" href="https://facebook.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#1877f2'; this.style.borderColor='#1877f2';"
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-facebook"></i></a>
 
-            <a href="https://twitter.com/" target="_blank"
+            <a aria-label="Twitter" href="https://twitter.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#000000'; this.style.borderColor='#000000';"
@@ -372,7 +377,7 @@
     </div>
   </footer>
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i
       class="bi bi-arrow-up-short"></i></a>
   <a href="https://wa.me/6282211221909" target="_blank"
     class="whatsapp-float d-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>

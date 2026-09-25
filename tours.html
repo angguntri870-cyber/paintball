@@ -18,7 +18,7 @@
   <!-- OpenGraph -->
   <meta property="og:title" content="Daftar Paket Paintball - Paintball.web.id">
   <meta property="og:description" content="Pilih paket paintball sesuai kebutuhan Anda: Paket Pemula, Paket Profesional, Paket Rambo (Unlimited), dan Paket Perusahaan untuk team building terbaik.">
-  <meta property="og:url" content="https://paintball.web.id/tours.html">
+  <meta property="og:url" content="https://paintball.web.id/tours">
   <meta property="og:type" content="product">
   <meta property="og:image" content="https://paintball.web.id/assets/img/logo.png">
   <meta property="og:site_name" content="Paintball.web.id">
@@ -48,10 +48,14 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/aos/aos.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"></noscript>
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -91,7 +95,7 @@
       "@type": "Product",
       "name": "Paket Paintball - Paintball.web.id",
       "description": "",
-      "url": "https://paintball.web.id/tours.html",
+      "url": "https://paintball.web.id/tours",
       "offers": {
         "@type": "Offer",
         "priceCurrency": "IDR",
@@ -103,6 +107,7 @@
 }
   </script>
 
+  <link rel="preload" as="image" href="assets/img/homepage/aksi-pemain-paintball-di-hutan-pinus.webp" fetchpriority="high">
 </head>
 
 <body class="tours-page">
@@ -131,7 +136,7 @@
           <li><a href="gallery">Galeri</a></li>
           <li><a href="artikel">Artikel</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" aria-label="Toggle navigation"></i>
       </nav>
 
       <a class="btn-getstarted" href="https://wa.me/6282211221909" target="_blank">Booking Sekarang</a>
@@ -180,7 +185,7 @@
         <div class="row mb-5" data-aos="zoom-in" data-aos-delay="200">
           <div class="col-12">
             <div class="spotlight-tour">
-              <img src="assets/img/paket/pemain-paintball-beraksi.webp" alt="Spotlight Destination" class="img-fluid">
+              <img loading="lazy" decoding="async" src="assets/img/paket/pemain-paintball-beraksi.webp" alt="Spotlight Destination" class="img-fluid">
               <div class="spotlight-overlay">
                 <span class="spotlight-label">Paling Laris</span>
                 <h3>Paket Rambo (Unlimited)</h3>
@@ -452,7 +457,7 @@
         </div>
         <div class="col-md-6 text-center text-md-end">
           <div class="social-links d-inline-flex gap-2">
-            <a href="https://instagram.com/" target="_blank"
+            <a aria-label="Instagram" href="https://instagram.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)'; this.style.borderColor='transparent';"
@@ -466,21 +471,21 @@
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-tiktok"></i></a>
 
-            <a href="https://linkedin.com/" target="_blank"
+            <a aria-label="LinkedIn" href="https://linkedin.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#0077b5'; this.style.borderColor='#0077b5';"
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-linkedin"></i></a>
 
-            <a href="https://facebook.com/" target="_blank"
+            <a aria-label="Facebook" href="https://facebook.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#1877f2'; this.style.borderColor='#1877f2';"
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-facebook"></i></a>
 
-            <a href="https://twitter.com/" target="_blank"
+            <a aria-label="Twitter" href="https://twitter.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#000000'; this.style.borderColor='#000000';"
@@ -493,7 +498,7 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- WhatsApp Float -->

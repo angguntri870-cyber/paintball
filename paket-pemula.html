@@ -18,7 +18,7 @@
   <!-- OpenGraph -->
   <meta property="og:title" content="Paket Pemula (Rookie) Paintball Terbaik">
   <meta property="og:description" content="Paket Pemula (Rookie) dirancang khusus untuk Anda yang baru pertama kali bermain paintball. Harga terjangkau, aman, dan instruktur profesional.">
-  <meta property="og:url" content="https://paintball.web.id/paket-pemula.html">
+  <meta property="og:url" content="https://paintball.web.id/paket-pemula">
   <meta property="og:type" content="product">
   <meta property="og:image" content="https://paintball.web.id/assets/img/logo.png">
   <meta property="og:site_name" content="Paintball.web.id">
@@ -48,10 +48,14 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/aos/aos.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"></noscript>
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -91,7 +95,7 @@
       "@type": "Product",
       "name": "Paket Pemula (Rookie) - Paintball.web.id",
       "description": "",
-      "url": "https://paintball.web.id/paket-pemula.html",
+      "url": "https://paintball.web.id/paket-pemula",
       "offers": {
         "@type": "Offer",
         "priceCurrency": "IDR",
@@ -103,6 +107,7 @@
 }
   </script>
 
+  <link rel="preload" as="image" href="assets/img/homepage/aksi-pemain-paintball-di-hutan-pinus.webp" fetchpriority="high">
 </head>
 
 <body class="tour-details-page">
@@ -167,7 +172,7 @@
           <div class="row align-items-center">
             <div class="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-delay="200">
               <div class="hero-visual">
-                <img loading="lazy" src="assets/img/paket/aksi-paintball-hutan.webp" alt="Scenic Coastal Journey" class="img-fluid">
+                <img loading="lazy" decoding="async" src="assets/img/paket/aksi-paintball-hutan.webp" alt="Scenic Coastal Journey" class="img-fluid">
                 <div class="badge-overlay">
                   <span class="tour-badge">Promo</span>
                 </div>
@@ -377,17 +382,17 @@
                   <div class="row g-3">
                     <div class="col-md-6">
                       <label for="traveler-name">Nama Lengkap / Perwakilan</label>
-                      <input type="text" name="name" id="traveler-name" class="form-control" required=""
+                      <input aria-label="Name" type="text" name="name" id="traveler-name" class="form-control" required=""
                         autocomplete="name">
                     </div>
                     <div class="col-md-6">
                       <label for="traveler-email">Alamat Email</label>
-                      <input type="email" name="email" id="traveler-email" class="form-control" required=""
+                      <input aria-label="Email" type="email" name="email" id="traveler-email" class="form-control" required=""
                         autocomplete="email">
                     </div>
                     <div class="col-md-4">
                       <label for="traveler-phone">Nomor WhatsApp</label>
-                      <input type="tel" name="phone" id="traveler-phone" class="form-control" autocomplete="tel">
+                      <input aria-label="Phone" type="tel" name="phone" id="traveler-phone" class="form-control" autocomplete="tel">
                     </div>
                     <div class="col-md-4">
                       <label for="travel-date">Tanggal Bermain</label>
@@ -412,7 +417,7 @@
                     </div>
                     <div class="col-12">
                       <label for="travel-notes">Catatan / Request Tambahan</label>
-                      <textarea name="message" id="travel-notes" rows="3" class="form-control"
+                      <textarea aria-label="Ada request khusus seperti dokumentasi atau acara ulang tahun?" name="message" id="travel-notes" rows="3" class="form-control"
                         placeholder="Ada request khusus seperti dokumentasi atau acara ulang tahun?"></textarea>
                     </div>
                   </div>
@@ -559,7 +564,7 @@
         </div>
         <div class="col-md-6 text-center text-md-end">
           <div class="social-links d-inline-flex gap-2">
-            <a href="https://instagram.com/" target="_blank"
+            <a aria-label="Instagram" href="https://instagram.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)'; this.style.borderColor='transparent';"
@@ -573,21 +578,21 @@
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-tiktok"></i></a>
 
-            <a href="https://linkedin.com/" target="_blank"
+            <a aria-label="LinkedIn" href="https://linkedin.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#0077b5'; this.style.borderColor='#0077b5';"
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-linkedin"></i></a>
 
-            <a href="https://facebook.com/" target="_blank"
+            <a aria-label="Facebook" href="https://facebook.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#1877f2'; this.style.borderColor='#1877f2';"
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-facebook"></i></a>
 
-            <a href="https://twitter.com/" target="_blank"
+            <a aria-label="Twitter" href="https://twitter.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#000000'; this.style.borderColor='#000000';"

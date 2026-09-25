@@ -18,7 +18,7 @@
   <!-- OpenGraph -->
   <meta property="og:title" content="Detail Paket Paintball - Paintball.web.id">
   <meta property="og:description" content="Cari tahu detail fasilitas, arena, perlengkapan, dan harga paket paintball kami. Reservasi sekarang untuk dapatkan promo khusus!">
-  <meta property="og:url" content="https://paintball.web.id/tour-details.html">
+  <meta property="og:url" content="https://paintball.web.id/tour-details">
   <meta property="og:type" content="product">
   <meta property="og:image" content="https://paintball.web.id/assets/img/logo.png">
   <meta property="og:site_name" content="Paintball.web.id">
@@ -48,10 +48,14 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/aos/aos.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"></noscript>
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -91,7 +95,7 @@
       "@type": "Product",
       "name": "Tour Details - Paintball.web.id",
       "description": "",
-      "url": "https://paintball.web.id/tour-details.html",
+      "url": "https://paintball.web.id/tour-details",
       "offers": {
         "@type": "Offer",
         "priceCurrency": "IDR",
@@ -103,6 +107,7 @@
 }
   </script>
 
+  <link rel="preload" as="image" href="assets/img/travel/showcase-7.webp" fetchpriority="high">
 </head>
 
 <body class="tour-details-page">
@@ -131,7 +136,7 @@
           <li><a href="gallery">Galeri</a></li>
           <li><a href="artikel">Artikel</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" aria-label="Toggle navigation"></i>
       </nav>
 
       <a class="btn-getstarted" href="https://wa.me/6282211221909" target="_blank">Booking Sekarang</a>
@@ -167,7 +172,7 @@
           <div class="row align-items-center">
             <div class="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-delay="200">
               <div class="hero-visual">
-                <img src="assets/img/travel/showcase-3.webp" alt="Scenic Coastal Journey" class="img-fluid">
+                <img loading="lazy" decoding="async" src="assets/img/travel/showcase-3.webp" alt="Scenic Coastal Journey" class="img-fluid">
                 <div class="badge-overlay">
                   <span class="tour-badge">Heritage Expedition</span>
                 </div>
@@ -450,17 +455,17 @@
                   <div class="row g-3">
                     <div class="col-md-6">
                       <label for="traveler-name">Full Name</label>
-                      <input type="text" name="name" id="traveler-name" class="form-control" required=""
+                      <input aria-label="Name" type="text" name="name" id="traveler-name" class="form-control" required=""
                         autocomplete="name">
                     </div>
                     <div class="col-md-6">
                       <label for="traveler-email">Email Address</label>
-                      <input type="email" name="email" id="traveler-email" class="form-control" required=""
+                      <input aria-label="Email" type="email" name="email" id="traveler-email" class="form-control" required=""
                         autocomplete="email">
                     </div>
                     <div class="col-md-4">
                       <label for="traveler-phone">Phone</label>
-                      <input type="tel" name="phone" id="traveler-phone" class="form-control" autocomplete="tel">
+                      <input aria-label="Phone" type="tel" name="phone" id="traveler-phone" class="form-control" autocomplete="tel">
                     </div>
                     <div class="col-md-4">
                       <label for="travel-date">Preferred Departure</label>
@@ -485,7 +490,7 @@
                     </div>
                     <div class="col-12">
                       <label for="travel-notes">Notes or Requests</label>
-                      <textarea name="message" id="travel-notes" rows="3" class="form-control"
+                      <textarea aria-label="Allergies, mobility needs, special occasions..." name="message" id="travel-notes" rows="3" class="form-control"
                         placeholder="Allergies, mobility needs, special occasions..."></textarea>
                     </div>
                   </div>
@@ -649,7 +654,7 @@
         </div>
         <div class="col-md-6 text-center text-md-end">
           <div class="social-links d-inline-flex gap-2">
-            <a href="https://instagram.com/" target="_blank"
+            <a aria-label="Instagram" href="https://instagram.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)'; this.style.borderColor='transparent';"
@@ -663,21 +668,21 @@
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-tiktok"></i></a>
 
-            <a href="https://linkedin.com/" target="_blank"
+            <a aria-label="LinkedIn" href="https://linkedin.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#0077b5'; this.style.borderColor='#0077b5';"
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-linkedin"></i></a>
 
-            <a href="https://facebook.com/" target="_blank"
+            <a aria-label="Facebook" href="https://facebook.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#1877f2'; this.style.borderColor='#1877f2';"
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-facebook"></i></a>
 
-            <a href="https://twitter.com/" target="_blank"
+            <a aria-label="Twitter" href="https://twitter.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#000000'; this.style.borderColor='#000000';"
@@ -690,7 +695,7 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- WhatsApp Float -->

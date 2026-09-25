@@ -18,7 +18,7 @@
   <!-- OpenGraph -->
   <meta property="og:title" content="Booking Paintball Sekarang - Paintball.web.id">
   <meta property="og:description" content="Segera reservasi jadwal bermain paintball Anda. Proses cepat, harga terjangkau, dan rasakan pertempuran yang menegangkan bersama tim.">
-  <meta property="og:url" content="https://paintball.web.id/booking.html">
+  <meta property="og:url" content="https://paintball.web.id/booking">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://paintball.web.id/assets/img/logo.png">
   <meta property="og:site_name" content="Paintball.web.id">
@@ -48,10 +48,14 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/aos/aos.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"></noscript>
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -91,6 +95,7 @@
 }
   </script>
 
+  <link rel="preload" as="image" href="assets/img/travel/showcase-7.webp" fetchpriority="high">
 </head>
 
 <body class="booking-page">
@@ -157,7 +162,7 @@
             <div class="trip-overview" data-aos="zoom-in" data-aos-delay="200">
 
               <div class="overview-hero">
-                <img loading="lazy" src="assets/img/travel/destination-14.webp" alt="Tour Preview" class="img-fluid">
+                <img loading="lazy" decoding="async" src="assets/img/travel/destination-14.webp" alt="Tour Preview" class="img-fluid">
                 <div class="hero-overlay">
                   <div class="tour-badge">Featured</div>
                   <h5>Mediterranean Escape</h5>
@@ -268,13 +273,13 @@
                     <div class="col-md-6">
                       <div class="field-group">
                         <label for="start-date">Start Date</label>
-                        <input type="date" name="departure_date" id="start-date" class="form-control" required="">
+                        <input aria-label="Departure Date" type="date" name="departure_date" id="start-date" class="form-control" required="">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="field-group">
                         <label for="end-date">End Date</label>
-                        <input type="date" name="return_date" id="end-date" class="form-control" required="">
+                        <input aria-label="Return Date" type="date" name="return_date" id="end-date" class="form-control" required="">
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -317,25 +322,25 @@
                     <div class="col-md-6">
                       <div class="field-group">
                         <label for="given-name">Given Name</label>
-                        <input type="text" name="first_name" id="given-name" class="form-control" required="">
+                        <input aria-label="First Name" type="text" name="first_name" id="given-name" class="form-control" required="">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="field-group">
                         <label for="family-name">Family Name</label>
-                        <input type="text" name="last_name" id="family-name" class="form-control" required="">
+                        <input aria-label="Last Name" type="text" name="last_name" id="family-name" class="form-control" required="">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="field-group">
                         <label for="contact-email">Email Address</label>
-                        <input type="email" name="email" id="contact-email" class="form-control" required="">
+                        <input aria-label="Email" type="email" name="email" id="contact-email" class="form-control" required="">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="field-group">
                         <label for="contact-phone">Phone Number</label>
-                        <input type="tel" name="phone" id="contact-phone" class="form-control" required="">
+                        <input aria-label="Phone" type="tel" name="phone" id="contact-phone" class="form-control" required="">
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -356,13 +361,13 @@
                     <div class="col-md-6">
                       <div class="field-group">
                         <label for="travel-doc">Travel Document No.</label>
-                        <input type="text" name="passport" id="travel-doc" class="form-control" required="">
+                        <input aria-label="Passport" type="text" name="passport" id="travel-doc" class="form-control" required="">
                       </div>
                     </div>
                     <div class="col-12">
                       <div class="field-group">
                         <label for="additional-notes">Additional Notes or Dietary Needs</label>
-                        <textarea name="special_requests" id="additional-notes" rows="3" class="form-control"
+                        <textarea aria-label="Share any preferences or requirements..." name="special_requests" id="additional-notes" rows="3" class="form-control"
                           placeholder="Share any preferences or requirements..."></textarea>
                       </div>
                     </div>
@@ -476,28 +481,28 @@
                       <div class="col-12">
                         <div class="field-group">
                           <label for="cc-number">Card Number</label>
-                          <input type="text" name="card_number" id="cc-number" class="form-control"
+                          <input aria-label="0000 0000 0000 0000" type="text" name="card_number" id="cc-number" class="form-control"
                             placeholder="0000 0000 0000 0000" maxlength="19">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="field-group">
                           <label for="cc-holder">Name on Card</label>
-                          <input type="text" name="card_name" id="cc-holder" class="form-control"
+                          <input aria-label="Jane Smith" type="text" name="card_name" id="cc-holder" class="form-control"
                             placeholder="Jane Smith">
                         </div>
                       </div>
                       <div class="col-md-3">
                         <div class="field-group">
                           <label for="cc-expiry">Expiry</label>
-                          <input type="text" name="card_expiry" id="cc-expiry" class="form-control" placeholder="MM/YY"
+                          <input aria-label="MM/YY" type="text" name="card_expiry" id="cc-expiry" class="form-control" placeholder="MM/YY"
                             maxlength="5">
                         </div>
                       </div>
                       <div class="col-md-3">
                         <div class="field-group">
                           <label for="cc-security">CVC</label>
-                          <input type="text" name="card_cvv" id="cc-security" class="form-control" placeholder="000"
+                          <input aria-label="000" type="text" name="card_cvv" id="cc-security" class="form-control" placeholder="000"
                             maxlength="4">
                         </div>
                       </div>
@@ -638,7 +643,7 @@
         </div>
         <div class="col-md-6 text-center text-md-end">
           <div class="social-links d-inline-flex gap-2">
-            <a href="https://instagram.com/" target="_blank"
+            <a aria-label="Instagram" href="https://instagram.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)'; this.style.borderColor='transparent';"
@@ -652,21 +657,21 @@
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-tiktok"></i></a>
 
-            <a href="https://linkedin.com/" target="_blank"
+            <a aria-label="LinkedIn" href="https://linkedin.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#0077b5'; this.style.borderColor='#0077b5';"
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-linkedin"></i></a>
 
-            <a href="https://facebook.com/" target="_blank"
+            <a aria-label="Facebook" href="https://facebook.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#1877f2'; this.style.borderColor='#1877f2';"
               onmouseleave="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.5)';"><i
                 class="bi bi-facebook"></i></a>
 
-            <a href="https://twitter.com/" target="_blank"
+            <a aria-label="Twitter" href="https://twitter.com/" target="_blank"
               class="rounded-circle d-flex align-items-center justify-content-center text-white"
               style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.3s; text-decoration: none;"
               onmouseenter="this.style.background='#000000'; this.style.borderColor='#000000';"
