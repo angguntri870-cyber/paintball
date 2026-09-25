@@ -765,7 +765,7 @@ section,
 # Travel Hero Section
 --------------------------------------------------------------*/
 .travel-hero {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--background-color), transparent 10%) 0%, color-mix(in srgb, var(--accent-color), transparent 70%) 100%), url("../img/travel/showcase-7.webp") center center no-repeat;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--background-color), transparent 10%) 0%, color-mix(in srgb, var(--accent-color), transparent 70%) 100%), url("../img/homepage/aksi-pemain-paintball-di-hutan-pinus.webp") center center no-repeat;
   background-size: cover;
   padding: 140px 0 80px;
   min-height: 100vh;
