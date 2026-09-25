@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Primary SEO -->
+  <title>Paintball.web.id – Penyedia Paintball Profesional #1 di Indonesia</title>
+  <meta name="description" content="Paintball.web.id – arena paintball profesional dengan instruktur tersertifikasi, paket lengkap untuk pemula hingga korporat. Booking sekarang dan rasakan seru-serunya paintball!">
+  <meta name="keywords" content="paintball, paintball Indonesia, paket paintball, arena paintball, paintball profesional, paintball malang, outbound paintball, team building paintball, paintball murah, sewa alat paintball, paintball perusahaan">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Paintball.web.id">
+  <meta name="geo.region" content="ID">
+  <meta name="geo.placename" content="Indonesia">
+  <meta name="language" content="Indonesian">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://paintball.web.id/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://paintball.web.id/">
+  <meta property="og:title" content="Paintball.web.id – Penyedia Paintball Profesional #1 di Indonesia">
+  <meta property="og:description" content="Arena paintball profesional dengan instruktur tersertifikasi. Paket lengkap untuk pemula, kelompok, hingga korporat. Booking sekarang!">
+  <meta property="og:image" content="https://paintball.web.id/assets/img/homepage/aksi-pemain-paintball-di-hutan-pinus.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pemain paintball beraksi di arena hutan pinus Paintball.web.id">
+  <meta property="og:site_name" content="Paintball.web.id">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://paintball.web.id/">
+  <meta name="twitter:title" content="Paintball.web.id – Penyedia Paintball Profesional #1 di Indonesia">
+  <meta name="twitter:description" content="Arena paintball profesional dengan instruktur tersertifikasi. Paket lengkap untuk pemula, kelompok, hingga korporat.">
+  <meta name="twitter:image" content="https://paintball.web.id/assets/img/homepage/aksi-pemain-paintball-di-hutan-pinus.webp">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.png">
+
+  <!-- DNS Prefetch & Preconnect -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Schema: WebSite + SearchAction (GEO/AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Paintball.web.id",
+    "url": "https://paintball.web.id/",
+    "description": "Penyedia layanan paintball profesional di Indonesia dengan instruktur tersertifikasi dan arena terlengkap.",
+    "inLanguage": "id-ID",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://paintball.web.id/artikel.html?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Schema: LocalBusiness / SportsActivityLocation (GEO/AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "SportsActivityLocation"],
+    "@id": "https://paintball.web.id/#business",
+    "name": "Paintball.web.id",
+    "alternateName": "Paintball Indonesia",
+    "description": "Arena paintball profesional di Indonesia yang menyediakan paket paintball untuk pemula, kelompok, dan korporat dengan instruktur tersertifikasi resmi.",
+    "url": "https://paintball.web.id/",
+    "telephone": "+6282211221909",
+    "email": "info@paintball.web.id",
+    "image": "https://paintball.web.id/assets/img/homepage/aksi-pemain-paintball-di-hutan-pinus.webp",
+    "logo": "https://paintball.web.id/assets/img/logo.png",
+    "priceRange": "Rp 150.000 - Rp 500.000",
+    "currenciesAccepted": "IDR",
+    "paymentAccepted": "Cash, Transfer Bank, QRIS",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Indonesia"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-7.966620",
+      "longitude": "112.632632"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday","Sunday"],
+        "opens": "07:00",
+        "closes": "18:00"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Paket Paintball",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Paket Pemula (Rookie)",
+          "url": "https://paintball.web.id/paket-pemula.html"
+        },
+        {
+          "@type": "Offer",
+          "name": "Paket Profesional (Pro)",
+          "url": "https://paintball.web.id/paket-pro.html"
+        },
+        {
+          "@type": "Offer",
+          "name": "Paket Rambo (Unlimited)",
+          "url": "https://paintball.web.id/paket-rambo.html"
+        },
+        {
+          "@type": "Offer",
+          "name": "Paket Perusahaan",
+          "url": "https://paintball.web.id/paket-perusahaan.html"
+        }
+      ]
+    },
+    "sameAs": [
+      "https://www.instagram.com/paintball.web.id",
+      "https://www.tiktok.com/@paintball.web.id"
+    ]
+  }
+  </script>
+
+  <!-- Schema: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://paintball.web.id/#organization",
+    "name": "Paintball.web.id",
+    "url": "https://paintball.web.id/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paintball.web.id/assets/img/logo.png",
+      "width": 200,
+      "height": 60
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+6282211221909",
+      "contactType": "customer service",
+      "availableLanguage": ["Indonesian"],
+      "contactOption": "TollFree"
+    },
+    "sameAs": [
+      "https://www.instagram.com/paintball.web.id",
+      "https://wa.me/6282211221909"
+    ]
+  }
+  </script>
+
