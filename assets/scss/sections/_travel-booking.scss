@@ -1,0 +1,548 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Travel Booking Section
+--------------------------------------------------------------*/
+.travel-booking {
+  .trip-overview {
+    background-color: var(--surface-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px color-mix(in srgb, var(--default-color), transparent 88%);
+    position: sticky;
+    top: 100px;
+
+    @media (max-width: 992px) {
+      position: static;
+    }
+
+    .overview-hero {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 25px 20px 20px;
+        background: linear-gradient(to top, color-mix(in srgb, #000000, transparent 15%), transparent);
+        color: #fff;
+
+        .tour-badge {
+          display: inline-block;
+          background-color: var(--accent-color);
+          color: var(--contrast-color);
+          padding: 3px 12px;
+          border-radius: 20px;
+          font-size: 11px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          margin-bottom: 8px;
+        }
+
+        h5 {
+          color: #fff;
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 4px;
+        }
+
+        p {
+          color: color-mix(in srgb, #ffffff, transparent 20%);
+          font-size: 13px;
+          margin-bottom: 6px;
+        }
+
+        .star-rating {
+          display: flex;
+          align-items: center;
+          gap: 2px;
+
+          i {
+            color: #ffc107;
+            font-size: 12px;
+          }
+
+          span {
+            margin-left: 6px;
+            color: color-mix(in srgb, #ffffff, transparent 30%);
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .overview-body {
+      padding: 25px;
+    }
+
+    .trip-details {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px dashed color-mix(in srgb, var(--default-color), transparent 85%);
+
+      .detail-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 14px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .label {
+          color: color-mix(in srgb, var(--default-color), transparent 35%);
+        }
+
+        .value {
+          color: var(--heading-color);
+          font-weight: 600;
+        }
+      }
+    }
+
+    .cost-summary {
+      margin-bottom: 20px;
+
+      h6 {
+        color: var(--heading-color);
+        font-weight: 700;
+        font-size: 15px;
+        margin-bottom: 14px;
+      }
+
+      .cost-line {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        margin-bottom: 10px;
+
+        span:first-child {
+          color: color-mix(in srgb, var(--default-color), transparent 35%);
+        }
+
+        span:last-child {
+          color: var(--heading-color);
+          font-weight: 500;
+        }
+      }
+
+      .cost-total {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 14px;
+        margin-top: 6px;
+        border-top: 2px solid var(--accent-color);
+        font-weight: 700;
+        font-size: 17px;
+        color: var(--heading-color);
+      }
+    }
+
+    .trust-badges {
+      display: flex;
+      gap: 15px;
+      padding: 12px;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 94%);
+      border-radius: 10px;
+
+      .badge-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        color: color-mix(in srgb, var(--default-color), transparent 25%);
+        font-weight: 500;
+
+        i {
+          color: var(--accent-color);
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .assistance-box {
+    display: flex;
+    gap: 15px;
+    padding: 20px 25px;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+
+    >i {
+      font-size: 28px;
+      color: var(--accent-color);
+      margin-top: 2px;
+    }
+
+    .assistance-content {
+      h6 {
+        color: var(--heading-color);
+        font-weight: 700;
+        font-size: 15px;
+        margin-bottom: 4px;
+      }
+
+      p {
+        color: color-mix(in srgb, var(--default-color), transparent 35%);
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+
+      a {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 4px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .step-card {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-color);
+    box-shadow: 0 4px 20px color-mix(in srgb, var(--default-color), transparent 92%);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 6px 25px color-mix(in srgb, var(--default-color), transparent 88%);
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .step-indicator {
+      flex-shrink: 0;
+
+      .step-num {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+        font-weight: 700;
+        font-size: 18px;
+        font-family: var(--heading-font);
+      }
+    }
+
+    .step-body {
+      flex: 1;
+      min-width: 0;
+
+      h4 {
+        color: var(--heading-color);
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+
+      >p {
+        color: color-mix(in srgb, var(--default-color), transparent 35%);
+        font-size: 14px;
+        margin-bottom: 22px;
+      }
+    }
+  }
+
+  .field-group {
+    margin-bottom: 5px;
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: var(--heading-color);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .form-control,
+    .form-select {
+      padding: 11px 15px;
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 82%);
+      border-radius: 10px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      background-color: var(--surface-color);
+      color: var(--default-color);
+
+      &:focus {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color), transparent 92%);
+        outline: none;
+      }
+
+      &::placeholder {
+        color: color-mix(in srgb, var(--default-color), transparent 70%);
+      }
+    }
+  }
+
+  .enhancement-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px 18px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    height: 100%;
+
+    &:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 88%);
+    }
+
+    .enhancement-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+
+      i {
+        font-size: 24px;
+        color: var(--accent-color);
+      }
+    }
+
+    .enhancement-info {
+      margin-bottom: 16px;
+
+      strong {
+        display: block;
+        color: var(--heading-color);
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+
+      p {
+        color: color-mix(in srgb, var(--default-color), transparent 35%);
+        font-size: 13px;
+        margin: 0;
+        line-height: 1.5;
+      }
+    }
+
+    .enhancement-action {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .enhancement-price {
+        font-weight: 700;
+        color: var(--accent-color);
+        font-size: 15px;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      .toggle-label {
+        position: relative;
+        display: block;
+        width: 44px;
+        height: 24px;
+        background-color: color-mix(in srgb, var(--default-color), transparent 75%);
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 3px;
+          left: 3px;
+          width: 18px;
+          height: 18px;
+          background-color: var(--contrast-color);
+          border-radius: 50%;
+          transition: transform 0.3s ease;
+        }
+      }
+
+      input[type="checkbox"]:checked+.toggle-label {
+        background-color: var(--accent-color);
+
+        &::after {
+          transform: translateX(20px);
+        }
+      }
+    }
+  }
+
+  .pay-method-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+
+    .pay-tab {
+      flex: 1;
+      min-width: 100px;
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 20px;
+        border: 2px solid color-mix(in srgb, var(--default-color), transparent 82%);
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        transition: all 0.3s ease;
+
+        i {
+          font-size: 18px;
+        }
+      }
+
+      &.active label,
+      input[type="radio"]:checked+label {
+        border-color: var(--accent-color);
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+      }
+    }
+  }
+
+  .card-fields {
+    background-color: color-mix(in srgb, var(--background-color), var(--surface-color) 50%);
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 18px;
+  }
+
+  .encryption-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    font-weight: 500;
+
+    i {
+      color: var(--accent-color);
+      font-size: 18px;
+    }
+  }
+
+  .agreement-checks {
+    margin-bottom: 25px;
+
+    .form-check {
+      margin-bottom: 14px;
+
+      .form-check-input {
+        accent-color: var(--accent-color);
+        margin-top: 3px;
+      }
+
+      .form-check-label {
+        font-size: 14px;
+        cursor: pointer;
+
+        a {
+          color: var(--accent-color);
+          font-weight: 600;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .submit-area {
+    text-align: center;
+    padding-top: 10px;
+
+    .btn-reserve {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 50px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), black 20%));
+      color: var(--contrast-color);
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 60%);
+      }
+
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    color: var(--default-color);
+    background-color: var(--surface-color);
+    font-size: 14px;
+    border-color: color-mix(in srgb, var(--default-color), transparent 82%);
+
+    &:focus {
+      border-color: var(--accent-color);
+    }
+
+    &::placeholder {
+      color: color-mix(in srgb, var(--default-color), transparent 70%);
+    }
+  }
+}

@@ -1,0 +1,626 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Travel Tours Section
+--------------------------------------------------------------*/
+.travel-tours {
+  .intro-block {
+    .intro-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 2.5rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 2rem;
+        height: 2px;
+        background: var(--accent-color);
+      }
+    }
+
+    .intro-heading {
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: var(--heading-color);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      margin-bottom: 0;
+    }
+  }
+
+  .search-wrapper {
+    width: 100%;
+    max-width: 420px;
+
+    @media (max-width: 992px) {
+      max-width: 100%;
+    }
+
+    .input-group {
+      border: 2px solid color-mix(in srgb, var(--default-color), transparent 85%);
+      border-radius: 50px;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+
+      &:focus-within {
+        border-color: var(--accent-color);
+      }
+
+      .input-group-text {
+        background: transparent;
+        border: none;
+        padding-left: 1.25rem;
+        color: var(--accent-color);
+        font-size: 1.125rem;
+      }
+
+      .form-control {
+        border: none;
+        background: transparent;
+        font-size: 1rem;
+        color: var(--default-color);
+        padding: 0.875rem 0.5rem;
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        &::placeholder {
+          color: color-mix(in srgb, var(--default-color), transparent 60%);
+        }
+      }
+
+      .search-action {
+        background: var(--accent-color);
+        border: none;
+        color: var(--contrast-color);
+        padding: 0 1.25rem;
+        font-size: 1.125rem;
+        transition: background 0.3s ease;
+        border-radius: 0;
+
+        &:hover {
+          background: color-mix(in srgb, var(--accent-color), #000 15%);
+        }
+      }
+    }
+  }
+
+  .tag-filters {
+    display: flex;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+
+    .tag-filter {
+      background: var(--surface-color);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+      padding: 0.625rem 1.375rem;
+      border-radius: 8px;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+      }
+
+      &.active {
+        background: var(--accent-color);
+        border-color: var(--accent-color);
+        color: var(--contrast-color);
+      }
+    }
+  }
+
+  .spotlight-tour {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    min-height: 450px;
+
+    >img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      display: block;
+
+      @media (max-width: 768px) {
+        height: 550px;
+      }
+    }
+
+    .spotlight-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 3rem;
+      background: linear-gradient(to top, color-mix(in srgb, #000, transparent 10%), color-mix(in srgb, #000, transparent 50%) 50%, transparent);
+      color: var(--contrast-color);
+
+      @media (max-width: 768px) {
+        padding: 2rem;
+      }
+
+      .spotlight-label {
+        display: inline-block;
+        background: var(--accent-color);
+        padding: 0.375rem 1rem;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1.25rem;
+      }
+
+      h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--contrast-color);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+
+        @media (max-width: 768px) {
+          font-size: 1.75rem;
+        }
+      }
+
+      p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: color-mix(in srgb, var(--contrast-color), transparent 15%);
+        margin-bottom: 1.25rem;
+        max-width: 600px;
+      }
+
+      .spotlight-info {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+
+        span {
+          font-size: 0.9rem;
+          color: color-mix(in srgb, var(--contrast-color), transparent 15%);
+          display: flex;
+          align-items: center;
+          gap: 0.375rem;
+
+          i {
+            font-size: 1rem;
+            color: var(--accent-color);
+          }
+        }
+      }
+
+      .spotlight-bottom {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        .spotlight-price {
+          small {
+            display: block;
+            font-size: 0.8rem;
+            color: color-mix(in srgb, var(--contrast-color), transparent 30%);
+          }
+
+          strong {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--contrast-color);
+          }
+        }
+      }
+    }
+  }
+
+  .spotlight-btn {
+    background: var(--contrast-color);
+    color: var(--default-color);
+    border: none;
+    padding: 0.875rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px color-mix(in srgb, #000, transparent 70%);
+      color: var(--default-color);
+    }
+  }
+
+  .block-heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 2rem;
+  }
+
+  .theme-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    aspect-ratio: 3 / 4;
+
+    &:hover {
+      img {
+        transform: scale(1.08);
+      }
+
+      .theme-label {
+        background: color-mix(in srgb, #000, transparent 30%);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .theme-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.25rem;
+      background: linear-gradient(to top, color-mix(in srgb, #000, transparent 20%), transparent);
+      transition: background 0.3s ease;
+
+      h5 {
+        color: var(--contrast-color);
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+
+      span {
+        color: color-mix(in srgb, var(--contrast-color), transparent 25%);
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  .listings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .block-heading {
+      margin-bottom: 0;
+    }
+
+    .sort-options {
+      .form-select {
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+        border-radius: 8px;
+        padding: 0.625rem 2.5rem 0.625rem 1rem;
+        font-size: 0.9rem;
+        color: var(--default-color);
+        background-color: var(--surface-color);
+        min-width: 200px;
+
+        &:focus {
+          border-color: var(--accent-color);
+          box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--accent-color), transparent 75%);
+        }
+      }
+    }
+  }
+
+  .trip-card {
+    background: var(--surface-color);
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+    transition: all 0.3s ease;
+    height: 100%;
+
+    &:hover {
+      border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+      box-shadow: 0 12px 40px color-mix(in srgb, var(--default-color), transparent 90%);
+
+      .trip-thumbnail img {
+        transform: scale(1.05);
+      }
+    }
+
+    .trip-thumbnail {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+
+      @media (max-width: 768px) {
+        height: 200px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        min-height: 220px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .trip-status {
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+        background: var(--accent-color);
+        color: var(--contrast-color);
+        padding: 0.3rem 0.75rem;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .trip-info {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--heading-color);
+        margin-bottom: 0.625rem;
+        line-height: 1.3;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+        flex-grow: 1;
+      }
+
+      .trip-meta {
+        display: flex;
+        gap: 1.25rem;
+        margin-bottom: 1rem;
+
+        span {
+          font-size: 0.85rem;
+          color: color-mix(in srgb, var(--default-color), transparent 35%);
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+
+          i {
+            color: var(--accent-color);
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .trip-footer {
+        border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+        padding-top: 1rem;
+
+        .trip-price {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--accent-color);
+
+          small {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: color-mix(in srgb, var(--default-color), transparent 45%);
+          }
+        }
+      }
+    }
+  }
+
+  .promo-banner {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 100%;
+    min-height: 350px;
+
+    >img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .promo-overlay {
+      position: relative;
+      z-index: 2;
+      padding: 2.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(160deg, transparent 30%, color-mix(in srgb, #000, transparent 20%));
+
+      .promo-badge {
+        display: inline-block;
+        align-self: flex-start;
+        background: var(--accent-color);
+        color: var(--contrast-color);
+        padding: 0.375rem 0.875rem;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+      }
+
+      h4 {
+        font-size: 1.625rem;
+        font-weight: 700;
+        color: var(--contrast-color);
+        margin-bottom: 0.75rem;
+        line-height: 1.3;
+      }
+
+      p {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        color: color-mix(in srgb, var(--contrast-color), transparent 15%);
+        margin-bottom: 1rem;
+      }
+
+      .promo-deadline {
+        font-size: 0.85rem;
+        color: color-mix(in srgb, var(--contrast-color), transparent 25%);
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.375rem;
+      }
+    }
+  }
+
+  .promo-btn {
+    display: inline-block;
+    background: var(--contrast-color);
+    color: var(--default-color);
+    border: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    align-self: flex-start;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px color-mix(in srgb, #000, transparent 70%);
+      color: var(--default-color);
+    }
+  }
+
+  .consult-banner {
+    background: var(--accent-color);
+    border-radius: 20px;
+    padding: 3.5rem;
+
+    @media (max-width: 768px) {
+      padding: 2.5rem 2rem;
+    }
+
+    .consult-content {
+      i {
+        font-size: 2.5rem;
+        color: var(--contrast-color);
+        margin-bottom: 1rem;
+        display: block;
+        opacity: 0.8;
+      }
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--contrast-color);
+        margin-bottom: 1rem;
+        line-height: 1.3;
+
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+      }
+
+      p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: color-mix(in srgb, var(--contrast-color), transparent 15%);
+        margin-bottom: 0;
+      }
+    }
+
+    .consult-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      @media (max-width: 992px) {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .primary-action {
+    background: var(--contrast-color);
+    color: var(--accent-color);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px color-mix(in srgb, #000, transparent 70%);
+      color: var(--accent-color);
+    }
+  }
+
+  .secondary-action {
+    background: transparent;
+    border: 2px solid color-mix(in srgb, var(--contrast-color), transparent 30%);
+    color: var(--contrast-color);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+      background: color-mix(in srgb, var(--contrast-color), transparent 85%);
+      border-color: var(--contrast-color);
+      color: var(--contrast-color);
+    }
+  }
+}

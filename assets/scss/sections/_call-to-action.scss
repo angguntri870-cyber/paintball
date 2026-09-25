@@ -1,0 +1,205 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Call To Action Section
+--------------------------------------------------------------*/
+.call-to-action {
+  position: relative;
+
+  .cta-content {
+    .tagline {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      padding: 6px 16px;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+      border-radius: 4px;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      margin-bottom: 2rem;
+    }
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+    }
+
+    .btn-explore {
+      padding: 14px 32px;
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--accent-color), black 15%);
+        color: var(--contrast-color);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 24px color-mix(in srgb, var(--accent-color), transparent 60%);
+      }
+    }
+
+    .btn-outline-cta {
+      padding: 14px 32px;
+      background-color: transparent;
+      color: var(--accent-color);
+      font-weight: 600;
+      border: 2px solid var(--accent-color);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+
+      &:hover {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 24px color-mix(in srgb, var(--accent-color), transparent 60%);
+      }
+    }
+  }
+
+  .cta-image {
+    position: relative;
+
+    img {
+      border-radius: 16px;
+      box-shadow: 0 20px 50px color-mix(in srgb, var(--default-color), transparent 85%);
+    }
+
+    .image-accent-border {
+      position: absolute;
+      top: 20px;
+      right: -20px;
+      width: 100%;
+      height: 100%;
+      border: 3px solid var(--accent-color);
+      border-radius: 16px;
+      z-index: -1;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+
+  .highlight-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background-color: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0 12px 12px 0;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateX(8px);
+      box-shadow: 0 8px 30px color-mix(in srgb, var(--default-color), transparent 90%);
+      border-left-color: color-mix(in srgb, var(--accent-color), black 15%);
+    }
+
+    .card-icon {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 88%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-size: 1.5rem;
+        color: var(--accent-color);
+      }
+    }
+
+    .card-text {
+      h4 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin-bottom: 0.35rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: color-mix(in srgb, var(--default-color), transparent 35%);
+        margin: 0;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .counter-strip {
+    margin-top: 3.5rem;
+    background-color: var(--accent-color);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+
+    @media (max-width: 768px) {
+      padding: 2rem 1rem;
+    }
+  }
+
+  .counter-block {
+    text-align: center;
+    padding: 1rem 0;
+
+    i {
+      font-size: 1.5rem;
+      color: color-mix(in srgb, var(--contrast-color), transparent 20%);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .counter-number {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--contrast-color);
+      font-family: var(--heading-font);
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .counter-text {
+      display: block;
+      font-size: 0.85rem;
+      color: color-mix(in srgb, var(--contrast-color), transparent 20%);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 0.25rem;
+    }
+  }
+}

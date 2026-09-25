@@ -1,0 +1,196 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Blog Comment Form Section
+--------------------------------------------------------------*/
+.blog-comment-form {
+  .comment-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+
+  .info-panel {
+    background: var(--accent-color);
+    padding: 50px 40px;
+    display: flex;
+    align-items: center;
+
+    .info-content {
+      text-align: center;
+      width: 100%;
+    }
+
+    .icon-wrap {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--contrast-color), transparent 80%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+
+      i {
+        font-size: 30px;
+        color: var(--contrast-color);
+      }
+    }
+
+    h3 {
+      color: var(--contrast-color);
+      font-size: 26px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    p {
+      color: color-mix(in srgb, var(--contrast-color), transparent 15%);
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .decorative-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+
+      span {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: color-mix(in srgb, var(--contrast-color), transparent 50%);
+
+        &:nth-child(2) {
+          width: 32px;
+          border-radius: 4px;
+          background: var(--contrast-color);
+        }
+      }
+    }
+  }
+
+  .form-panel {
+    background-color: var(--surface-color);
+    padding: 50px 40px;
+
+    .required-note {
+      font-size: 13px;
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+  }
+
+  .input-box {
+    position: relative;
+
+    i {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: color-mix(in srgb, var(--default-color), transparent 50%);
+      z-index: 2;
+      transition: color 0.3s;
+    }
+
+    &.textarea-box i {
+      top: 18px;
+      transform: none;
+    }
+
+    &:focus-within i {
+      color: var(--accent-color);
+    }
+
+    .form-control {
+      padding: 14px 16px 14px 46px;
+      border: 2px solid color-mix(in srgb, var(--default-color), transparent 85%);
+      border-radius: 10px;
+      font-size: 14px;
+      color: var(--default-color);
+      background-color: var(--surface-color);
+      transition: all 0.3s ease;
+
+      &:focus {
+        border-color: var(--accent-color);
+        box-shadow: none;
+        outline: none;
+      }
+
+      &:hover:not(:focus) {
+        border-color: color-mix(in srgb, var(--default-color), transparent 65%);
+      }
+
+      &::placeholder {
+        color: color-mix(in srgb, var(--default-color), transparent 65%);
+      }
+    }
+
+    textarea.form-control {
+      height: auto;
+      min-height: 130px;
+      resize: vertical;
+    }
+  }
+
+  .btn-post {
+    padding: 13px 30px;
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+
+    i {
+      font-size: 15px;
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      background: color-mix(in srgb, var(--accent-color), transparent 15%);
+      box-shadow: 0 6px 20px color-mix(in srgb, var(--accent-color), transparent 60%);
+
+      i {
+        transform: translateX(4px);
+      }
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  @media (max-width: 992px) {
+    .info-panel {
+      padding: 40px 30px;
+    }
+
+    .form-panel {
+      padding: 40px 30px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .form-panel {
+      padding: 28px 20px;
+    }
+
+    .info-panel {
+      padding: 30px 20px;
+    }
+
+    .btn-post {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

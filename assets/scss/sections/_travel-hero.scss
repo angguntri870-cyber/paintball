@@ -1,0 +1,260 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Travel Hero Section
+--------------------------------------------------------------*/
+.travel-hero {
+  background: linear-gradient(180deg,
+      color-mix(in srgb, var(--background-color), transparent 10%) 0%,
+      color-mix(in srgb, var(--accent-color), transparent 70%) 100%),
+    url("../img/travel/showcase-7.webp") center center no-repeat;
+  background-size: cover;
+  padding: 140px 0 80px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .hero-content {
+    .badge-tag {
+      display: inline-block;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+      color: var(--accent-color);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 60%);
+
+      i {
+        margin-right: 6px;
+      }
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -1px;
+    }
+
+    p {
+      font-size: 1.15rem;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+    }
+  }
+
+  .btn-explore {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 32px;
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--accent-color), black 15%);
+      border-color: color-mix(in srgb, var(--accent-color), black 15%);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px color-mix(in srgb, var(--accent-color), transparent 60%);
+      color: var(--contrast-color);
+    }
+  }
+
+  .btn-browse {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 32px;
+    background-color: transparent;
+    color: var(--default-color);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid color-mix(in srgb, var(--default-color), transparent 60%);
+
+    &:hover {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+      transform: translateY(-3px);
+    }
+  }
+
+  .search-bar {
+    background-color: color-mix(in srgb, var(--surface-color), transparent 5%);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 24px 28px;
+    box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 85%);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      margin-bottom: 6px;
+    }
+
+    .input-icon {
+      position: relative;
+
+      i {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--accent-color);
+        font-size: 1rem;
+      }
+
+      .form-control {
+        padding-left: 40px;
+      }
+    }
+
+    .form-control {
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+      border-radius: 10px;
+      padding: 11px 14px;
+      height: auto;
+      background-color: color-mix(in srgb, var(--surface-color), transparent 40%);
+      color: var(--default-color);
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+
+      &:focus {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 85%);
+        background-color: var(--surface-color);
+      }
+
+      &::placeholder {
+        color: color-mix(in srgb, var(--default-color), transparent 60%);
+      }
+    }
+
+    .btn-search {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 11px 28px;
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--accent-color), black 12%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color), transparent 55%);
+      }
+    }
+  }
+
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 16px 0;
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      font-size: 0.95rem;
+
+      i {
+        color: var(--accent-color);
+        font-size: 1.15rem;
+      }
+
+      strong {
+        font-weight: 800;
+        color: var(--default-color);
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 100px 0 60px;
+    min-height: auto;
+
+    .hero-content {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    .stats-row {
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 80px 0 50px;
+
+    .hero-content {
+      h1 {
+        font-size: 2.25rem;
+
+        br {
+          display: none;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .badge-tag {
+        font-size: 0.75rem;
+        padding: 6px 16px;
+      }
+    }
+
+    .btn-explore,
+    .btn-browse {
+      padding: 12px 24px;
+      font-size: 0.9rem;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .d-flex {
+      flex-direction: column !important;
+      align-items: stretch !important;
+    }
+
+    .search-bar {
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .stats-row {
+      gap: 16px;
+
+      .stat-item {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}

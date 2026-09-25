@@ -1,0 +1,177 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+.testimonials {
+  .review-card {
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    height: 100%;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 40px color-mix(in srgb, var(--default-color), transparent 88%);
+
+      .accent-bar {
+        width: 8px;
+      }
+
+      .reviewer-photo img {
+        transform: scale(1.05);
+      }
+    }
+
+    &.featured {
+      .accent-bar {
+        background: linear-gradient(180deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--default-color) 30%));
+      }
+
+      .review-body {
+        background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+      }
+
+      .stars i {
+        color: var(--accent-color);
+      }
+
+      .decorative-quote {
+        color: color-mix(in srgb, var(--accent-color), transparent 85%);
+      }
+    }
+  }
+
+  .accent-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+    z-index: 2;
+  }
+
+  .review-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem 2rem 2rem 2.5rem;
+    background-color: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-left: none;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .reviewer-photo {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .review-content {
+    flex: 1;
+    min-width: 0;
+
+    p {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      margin: 0.75rem 0 1rem;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .stars {
+    display: flex;
+    gap: 3px;
+
+    i {
+      font-size: 0.875rem;
+      color: #f5a623;
+    }
+  }
+
+  .reviewer-info {
+    h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    span {
+      font-size: 0.8125rem;
+      color: color-mix(in srgb, var(--default-color), transparent 45%);
+      font-style: italic;
+    }
+  }
+
+  .decorative-quote {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 1.25rem;
+    font-size: 4rem;
+    color: color-mix(in srgb, var(--default-color), transparent 92%);
+    z-index: 0;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  @media (max-width: 992px) {
+    .review-body {
+      padding: 1.5rem 1.5rem 1.5rem 2rem;
+      gap: 1.25rem;
+    }
+
+    .reviewer-photo {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+    }
+
+    .decorative-quote {
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .review-body {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1.5rem 1.25rem 1.5rem 1.75rem;
+    }
+
+    .reviewer-photo {
+      width: 64px;
+      height: 64px;
+    }
+
+    .stars {
+      justify-content: center;
+    }
+
+    .review-content p {
+      font-size: 0.875rem;
+    }
+
+    .decorative-quote {
+      font-size: 2.5rem;
+      right: 0.75rem;
+      bottom: 0.5rem;
+    }
+  }
+}
